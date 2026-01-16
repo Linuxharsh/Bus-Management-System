@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login page</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBSfjVJwg5MZswVZLUo7W3kQlm216epXmo",
+      authDomain: "bridge-between-businessman.firebaseapp.com",
+      projectId: "bridge-between-businessman",
+      storageBucket: "bridge-between-businessman.firebasestorage.app",
+      messagingSenderId: "242260337888",
+      appId: "1:242260337888:web:67909b3246682bac291c85",
+      measurementId: "G-62ZZXVK4MK"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    window.auth = firebase.auth();
+  </script>
+</head>
+<body>
+  <h2>Login to Your Account</h2>
+  <input id="email" type="email" placeholder="Enter your email"><br><br>
+  <input id="password" type="password" placeholder="Enter your password"><br><br>
+  <button onclick="loginUser()">Login</button>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Page</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBSfjVJwg5MZswVZLUo7W3kQlm216epXmo",
+      authDomain: "bridge-between-businessman.firebaseapp.com",
+      projectId: "bridge-between-businessman",
+      storageBucket: "bridge-between-businessman.firebasestorage.app",
+      messagingSenderId: "242260337888",
+      appId: "1:242260337888:web:67909b3246682bac291c85",
+      measurementId: "G-62ZZXVK4MK"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    window.db = firebase.firestore();
+  </script>
+</head>
+<body>
+  <h2>Search for Bus</h2>
+  <input id="source" placeholder="Source">
+  <input id="destination" placeholder="Destination">
+  <button onclick="searchBus()">Search</button>
+  <div id="results"></div>
+  <script src="../js/user.js"></script>
+</body>
+</html>
